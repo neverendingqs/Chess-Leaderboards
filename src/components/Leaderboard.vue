@@ -19,7 +19,7 @@
       }
     },
     mounted: function() {
-      fetch(`data/${this.ruleset}.txt`)
+      fetch(`${this.ruleset}`)
         .then(response => response.text())
         .then(txt => {
           const people = calculateAllElo(txt);
